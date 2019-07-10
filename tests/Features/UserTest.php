@@ -2,7 +2,7 @@
 
 use Laravel\Lumen\Testing\DatabaseMigrations;
 use Laravel\Lumen\Testing\DatabaseTransactions;
-use App\Controllers\AuthController;
+use App\Controllers\UserController;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
