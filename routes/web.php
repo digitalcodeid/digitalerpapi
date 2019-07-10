@@ -14,3 +14,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// User Auth
+$router->post('/register', ['as' => 'user.register', 'uses' => 'UserController@register']);
+$router->post('/login', ['as' => 'user.login', 'uses' => 'AuthController@login']);
+$router->get('/user/{id}', ['as' => 'user.show', 'uses' => 'AuthController@show']);
+$router->delete('/user/{id}', ['as' => 'user.destroy', 'uses' => 'AuthController@destroy']);
+$router->get('/logout', ['as' => 'user.logout', 'uses' => 'AuthController@logout']);
+
